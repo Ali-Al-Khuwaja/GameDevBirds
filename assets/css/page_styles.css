@@ -146,6 +146,11 @@ ul {
         font-size: 1.1rem;
     }
 
+    .text-content {
+        margin-left: 35px !important;
+        margin-right: 35px !important;
+    }
+
     .centered-text-over-img-blog>h1 {
         font-size: 2.5rem !important;
     }
@@ -198,7 +203,7 @@ ul {
 
 .blogPostCard {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
     align-items: center;
 }
