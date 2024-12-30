@@ -1,0 +1,307 @@
+:root {
+    --white-text: #ffffff;
+    --bg-black: #1b1f23;
+    --black-line: #2b2f33;
+    --card-bg: #23282b;
+    --green: #6DB33F;
+    color: var(--white-text);
+    background-color: var(--bg-black);
+    font-family: "Rubik", sans-serif, system-ui;
+}
+
+/* custom scroll bar css */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--black-line);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color: rgb(100, 100, 100);
+}
+
+/* page title text */
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 450;
+    margin: 0;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+
+.welcome-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fill;
+    height: fit-content;
+    gap: 20px;
+    margin: 75px;
+    margin-top: 100px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    border-radius: 13px;
+    background-image: linear-gradient(120deg,
+            hsl(88deg 86% 57%) 0%,
+            hsl(93deg 71% 56%) 14%,
+            hsl(99deg 57% 54%) 29%,
+            hsl(110deg 43% 52%) 45%,
+            hsl(131deg 39% 46%) 64%,
+            hsl(157deg 69% 32%) 100%);
+}
+
+.welcome-title>h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0;
+    width: 75%;
+    text-align: center;
+    margin-top: 0;
+}
+
+/* button styling */
+
+.greenButton {
+    background-color: var(--green) !important;
+    border-radius: 5px !important;
+    padding: 5px 10px 5px 10px !important;
+    box-sizing: border-box !important;
+    color: var(--card-bg) !important;
+    border-style: none;
+}
+
+/* navigation bar css */
+.logo {
+    height: auto;
+    width: 2.5rem;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    border-bottom: 0.5px solid var(--black-line);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: var(--bg-black);
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+nav>div>ul,
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+
+.minimal-anchors {
+    text-decoration: none;
+    margin: 0%;
+    padding: 0%;
+    color: var(--white-text);
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+
+    .welcome-title {
+        margin: 35px;
+        margin-top: 100px;
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+
+    .welcome-title>h1 {
+        font-size: 2rem !important;
+        width: 100%;
+    }
+
+    .welcome-title>h2 {
+        font-size: 1.1rem;
+    }
+
+    .centered-text-over-img-blog>h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .hide {
+        display: none;
+        visibility: hidden;
+    }
+
+    .narrowTextBox {
+        width: 100% !important;
+    }
+
+    .flexDiv {
+        justify-content: center !important;
+    }
+
+    nav {
+        font-size: medium !important;
+    }
+
+    .blogThumbnail {
+        height: 100px !important;
+        width: 120px !important;
+    }
+
+    nav>div>ul,
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-weight: 500;
+    }
+}
+
+#FAQ {
+    margin-top: 100px;
+}
+
+@media only screen and (max-width: 900px) {
+    .blogPostCard {
+        gap: 3rem !important;
+    }
+}
+
+.blogPostCard {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.blogPostBackground {
+    grid-column-start: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blogTitle {
+    grid-column: 2/3;
+}
+
+.blog-posts {
+    display: flex;
+    gap: 10px;
+}
+
+.blogThumbnail {
+    height: 100px;
+    width: 175px;
+    border-radius: 7px;
+    position: absolute;
+}
+
+.fit-logo {
+    position: relative;
+    height: auto;
+    width: 50px;
+    z-index: 1;
+}
+
+/* FAQ section vitals css selectors*/
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-left: 75px;
+    margin-right: 75px;
+    line-height: 2rem;
+}
+
+.accordion {
+    border-radius: 13px;
+    border: 2px solid var(--black-line);
+    background-color: var(--card-bg);
+    padding: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 6.7px rgba(0, 0, 0, 0.081),
+        0px 0px 22.3px rgba(0, 0, 0, 0.119), 0px 0px 100px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+.flexDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.narrowTextBox {
+    width: 50%;
+    text-align: start;
+    text-wrap: wrap;
+}
+
+/* footer */
+.legalStuff {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.legalStuff>p {
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.legalStuff>div>a>img {
+    height: 40px;
+    width: auto;
+}
+
+.legalStuff>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer {
+    margin: 1rem;
+    text-align: center;
+}
